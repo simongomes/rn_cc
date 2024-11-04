@@ -1,23 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from 'react-native';
+import { Slot } from 'expo-router';
 
-const App = () => {
+const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>React Native CC</Text>
-    </View>
-  );
+    <>
+      <Text>Header</Text>
+      <Slot />
+      <Text>Footer</Text>
+    </>
+  )
 }
 
-const styles = StyleSheet.create({ 
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
-    color: 'black',
-  },
-});
-
-export default App;
+export default RootLayout;
